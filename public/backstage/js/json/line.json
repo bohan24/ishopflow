@@ -1,0 +1,9 @@
+{
+  "type":"bar",
+  "data":{
+    "labels": ["red", "green", "blue"],
+    "data": ["12","19","3"],
+    "background":["#ff0000","#00FF00","#0000FF"],
+    "borderWidth": "1"
+  }
+}

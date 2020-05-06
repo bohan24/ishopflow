@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class='icon-group'></div>
+</body>
+</html>
+
+
+<script>    
+    $(function(){    
+        $.ajax({    
+            //请求方式    
+            type:"GET",    
+            //文件位置    
+            url:"js/json/icon.json",  
+            //返回数据格式为json,也可以是其他格式如    
+            dataType: "json",    
+            //请求成功后要执行的函数，拼接html    
+            success: function(data){    
+                var str="<div class='icon-group'>";    
+                $.each(data,function(i,n){    
+                    str+="<i class='fa"+n.title+"'>"+"ID："+n.id+"</i>"; 
+                });    
+                str+="</ul>";    
+                $("").append(str);    
+            }    
+        });    
+    });    
+</script>  
+
+<div class="icon-group">
+
+  <div class="item">
+    <i class="fa fa-home"></i>
+  </div>>
+  
+</div>
+
