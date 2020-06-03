@@ -125,7 +125,13 @@ class ProductController extends Controller
 
     }
 
-    public function add(request $request)
+    /**
+     * 新增商品資料
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function add(Request $request)
     {
           $product=new Product();
 
@@ -198,6 +204,13 @@ class ProductController extends Controller
 
     }
 
+    /**
+     * 更新資料
+     *
+     * @param request $request
+     * @param [type] $id
+     * @return void
+     */
     public function update(request $request,$id)
     {
           $product=Product::find($id);
@@ -260,12 +273,23 @@ class ProductController extends Controller
 
     }
 
+    /**
+     * 刪除資料
+     *
+     * @param Request $request
+     * @return void
+     */
     public function delete(Request $request)
     {
          $product=Product::find($request->id);
          $product->delete();
     }
 
+    /**
+     * 前台顯示商品資料
+     *
+     * @return void
+     */
     public function frontend()
     {
 
